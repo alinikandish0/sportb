@@ -1,0 +1,21 @@
+model OutboxMessage {
+  id            String       @id @default(uuid())
+  aggregateType String
+  aggregateId   String
+  eventType     String
+  payload       Json
+  status        OutboxStatus @default(PENDING)
+  retryCount    Int          @default(0)
+  lastError     String?
+  createdAt     DateTime     @default(now())
+  processedAt   DateTime?
+
+  @@index([status, createdAt])
+  @@map("outbox_messages")
+}
+
+enum OutboxStatus {
+  PENDING
+  PROCESSED
+  FAILED
+}

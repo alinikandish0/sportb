@@ -1,0 +1,10 @@
+model IdempotencyKey {
+  id        String   @id @default(uuid())
+  userId    String
+  key       String
+  response  Json
+  createdAt DateTime @default(now())
+
+  @@unique([userId, key])
+  @@index([createdAt])
+}

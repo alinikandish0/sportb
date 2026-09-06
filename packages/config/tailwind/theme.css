@@ -1,0 +1,21 @@
+/**
+ * توکن‌های طراحی مشترک بین web/admin/partner (رنگ برند، فونت، radius).
+ * هر اپ توی global.css خودش این فایل رو import می‌کنه تا ظاهر یکپارچه داشته باشن.
+ * برای تغییر رنگ برند یا فونت پروژه، فقط همینجا رو عوض کن — نه جدا جدا تو هر اپ.
+ */
+@theme {
+  --color-brand-50: #eef2ff;
+  --color-brand-100: #e0e7ff;
+  --color-brand-200: #c7d2fe;
+  --color-brand-300: #a5b4fc;
+  --color-brand-400: #818cf8;
+  --color-brand-500: #6366f1;
+  --color-brand-600: #4f46e5;
+  --color-brand-700: #4338ca;
+  --color-brand-800: #3730a3;
+  --color-brand-900: #312e81;
+
+  --font-sans: 'Vazirmatn', ui-sans-serif, system-ui, sans-serif;
+
+  --radius-card: 0.75rem;
+}
